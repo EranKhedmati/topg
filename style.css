@@ -9,6 +9,7 @@
   --brandDiscord: #5865F2;
   --brandYoutube: #CD201F;
   --brandInstagram: #E4405F;
+  --brandTelegram: #0088cc;
 }
 
 /* Global Class ------------------------------------------------- */
@@ -131,7 +132,7 @@ input::-webkit-inner-spin-button {
 .App .content .links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 1.5rem;
@@ -156,6 +157,10 @@ input::-webkit-inner-spin-button {
 
 .App .content .links .instagram {
     color: var(--brandInstagram);
+}
+
+.App .content .links .telegram {
+  color: var(--brandTelegram);
 }
 
 /* Media Screen ------------------------------------------------- */
