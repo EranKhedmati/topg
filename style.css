@@ -5,11 +5,12 @@
 :root {
   --black: #212121;
   --light: #ffffff;
-  --boldGray: #7F7E7E;
-  --brandDiscord: #5865F2;
-  --brandYoutube: #CD201F;
-  --brandInstagram: #E4405F;
+  --boldGray: #7f7e7e;
+  --brandDiscord: #5865f2;
+  --brandYoutube: #cd201f;
+  --brandInstagram: #e4405f;
   --brandTelegram: #0088cc;
+  --warning: #ffcc00;
 }
 
 /* Global Class ------------------------------------------------- */
@@ -31,7 +32,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 input[type="number"] {
@@ -46,157 +47,155 @@ input::-webkit-inner-spin-button {
 /* App ------------------------------------------------- */
 .App {
   width: 100%;
-  max-width: 944px;
+  max-width: 1024px;
   background: var(--light);
   border-radius: 10px;
   display: flex;
+  align-items: stretch;
 }
 
 /* Cover */
 .App .cover {
-  width: 55%;
+  width: 60%;
   border-radius: 10px 0 0 10px;
-  background: url("./images/adrew.jpg") center/cover no-repeat;
+  background: url("./images/adrew.jpg") center/cover;
 }
 
 /* Content */
 .App .content {
-  width: 45%;
+  width: 40%;
   padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
 }
 
-.App .content > h1 {
-  padding-bottom: 1rem;
+/* Title */
+.App .content .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Warning */
+.App .content .warning {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--warning);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  text-align: right;
+  border-radius: 5px;
 }
 
 /* Input */
 .App .content .input-field {
-  margin-top: 1rem;
+  text-align: right;
+  margin-top: 1.5rem;
 }
 
 .App .content .input-field > input {
   width: 100%;
-  height: 40px;
-  border: 1px solid var(--black);
-  border-radius: 5px;
   margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  outline: none;
+  font-size: 1rem;
   padding: 0.5rem;
-  font-size: 1.1rem;
 }
 
-/* View Button */
-.App .content .view-btn {
-    width: 100%;
-    padding: 0.9rem;
-    border-radius: 20px;
-    margin-top: 2.5rem;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    background: var(--black);
-    color: var(--light);
-    transition: all 250ms;
-}
-
-.App .content .view-btn:hover {
-    color: var(--black);
-    background: transparent;
-    border: 2px solid var(--black);
+/* Submit */
+.App .content .sub-btn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: var(--black);
+  border: none;
+  color: var(--light);
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Divider */
 .App .content .divider {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    color: var(--boldGray);
-    white-space: nowrap;
-    margin-top: 2rem;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  gap: 5px;
+  color: var(--boldGray);
+  font-size: 0.9rem;
 }
 
-.App .content .divider .left, 
+.App .content .divider .left,
 .App .content .divider .right {
-    width: 100%;
-    height: 1px;
-    background: var(--boldGray);
+  width: 100%;
+  height: 2px;
+  background: var(--boldGray);
+  border-radius: 10px;
 }
 
-/* Links */
+/* Brand Links */
 .App .content .links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
 }
 
 .App .content .links .circle {
-    padding: 0.9rem;
-    border: 2px solid;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.6rem;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App .content .links .discord{
-    color: var(--brandDiscord);
+.App .content .links .discord {
+  border-color: var(--brandDiscord);
 }
 
 .App .content .links .youtube {
-    color: var(--brandYoutube);
+  border-color: var(--brandYoutube);
 }
-
 .App .content .links .instagram {
-    color: var(--brandInstagram);
+  border-color: var(--brandInstagram);
 }
-
 .App .content .links .telegram {
-  color: var(--brandTelegram);
+  border-color: var(--brandTelegram);
 }
 
-/* Media Screen ------------------------------------------------- */
-@media (max-width: 960px) {
-    .App {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-
-    .App .cover {
-        border-radius: 0;
-        width: 50%;
-    }
-    
-    .App .content {
-        width: 50%;
-    }
-
-    .App .content .divider {
-        margin-top: auto;
-    }
+/* Media Query ------------------------------------------------- */
+@media (max-width: 1024px) {
+  .App {
+    height: 100%;
+    border-radius: 0;  
+  }
+  
+  .divider {
+    margin-top: auto;
+  }
+  
+  .App .content,
+  .App .cover {
+    border-radius: 0;  
+    width: 50%;
+  }
 }
 
-@media (max-width: 650px) {
-    .App {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-
-    .App .cover {
-        display: none;
-    }
-    
-    .App .content {
-        width: 100%;
-    }
+@media (max-width: 680px) {
+  .App .cover {
+    display: none;
+  }
+  
+  .App .content {
+    width: 100%;
+  }
 }
